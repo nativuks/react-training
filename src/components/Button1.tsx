@@ -5,9 +5,9 @@ export function Button1() {
      const[counter, setCounter] = useState(0);
 
      function incrementCounter() {
-         
+         counterClick++;
          setCounter(counter+1);
-         console.log(counter);
+         console.log(counterClick);
      }
      function handleClick() {
         counterClick++;
@@ -17,7 +17,6 @@ export function Button1() {
         <><button onClick={incrementCounter}>
            {counter}
         </button>
-        <button onClick={handleClick}>click</button>
         </>
     );
 }

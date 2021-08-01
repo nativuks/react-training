@@ -21,6 +21,7 @@ export const AuthContext = createContext({} as AuthContextType);
 export function AuthContextProvider(props: AuthContextProviderType) {
 
     const [user, setUser] = useState<User>();
+    const [country, setCountry] = useState();
 
 
     async function signInWithGoogle() {
