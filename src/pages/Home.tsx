@@ -6,6 +6,7 @@ import googleiconImg from '../assets/images/google-icon.svg';
 
 import '../styles/auth.scss'
 import { useAuth } from '../hooks/useAuth';
+import { Button } from '../components/Button';
 export function Home() {
 
     const { user, signInWithGoogle} = useAuth();
@@ -35,7 +36,7 @@ export function Home() {
                     <div className="separator"> O entre a una sala</div>
                     <form>
                         <input type="text" />
-                        <button>Entrar a sala</button>
+                        <Button>Entrar a sala</Button>
                     </form>
                 </div>
             </main>

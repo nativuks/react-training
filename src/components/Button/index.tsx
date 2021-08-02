@@ -1,26 +1,11 @@
+import { ButtonHTMLAttributes } from 'react';
 
+import './style.scss'
 
-import {firebase,auth} from '../../services/firebase';
-
-export function Button () {
-
-    async function signInGoogle() {
-        const provider = new firebase.auth.GoogleAuthProvider();
-      
-        const result = await auth.signInWithPopup(provider);
-        console.log('Login', result);
-
-    }
-
-    async function logOut() {
-        console.log('Logout');
-        auth.signOut();
-    }
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+export function Button (props: ButtonProps) {
 
     return(
-        <div>
-            <button onClick={signInGoogle}>Login</button>
-            <button onClick={logOut}>Logout</button>
-        </div>
+        <button className="button" {...props} >{props.children}</button>
     );
 }
